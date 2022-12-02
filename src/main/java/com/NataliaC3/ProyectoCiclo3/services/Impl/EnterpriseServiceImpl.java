@@ -1,7 +1,7 @@
 package com.NataliaC3.ProyectoCiclo3.services.Impl;
 
-import com.NataliaC3.ProyectoCiclo3.entities.Employee;
-import com.NataliaC3.ProyectoCiclo3.services.EmployeeService;
+import com.NataliaC3.ProyectoCiclo3.entities.Enterprise;
+import com.NataliaC3.ProyectoCiclo3.services.EnterpriseService;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -11,14 +11,13 @@ import java.util.List;
 
 @Repository
 @Transactional
-public class EmployeeServiceImpl implements EmployeeService {
-
+public class EnterpriseServiceImpl implements EnterpriseService {
     @PersistenceContext
     private EntityManager entityManager;
 
     @Override
-    public List<Employee> getEmployees() {
-        String query = "FROM Employee";
+    public List<Enterprise> getEnterprises() {
+        String query = "FROM Enterprise";
         return entityManager.createQuery(query).getResultList();
     }
 }

@@ -16,11 +16,12 @@ public class EmployeesController {
 
     @RequestMapping(value = "/employees")
     public List<Employee> getEmployees() {
+
         return employeeService.getEmployees();
     }
 
     @RequestMapping(value = "/employees/{id}")
-    public Employee getEmployee(@PathVariable Long id) {
+    public Employee getEmployee (@PathVariable Long id) {
 
         Employee employee = new Employee();
         employee.setId(id);
@@ -34,7 +35,7 @@ public class EmployeesController {
     }
 
     @RequestMapping(value = "/employees23423")
-    public Employee modifyEmployees() {
+    public Employee modifyEmployee() {
         Employee employee = new Employee();
         employee.setName("Natalia");
         employee.setEmail("mataliaa@gmail.com");
@@ -46,7 +47,7 @@ public class EmployeesController {
     }
 
     @RequestMapping(value = "/employees2342")
-    public Employee deleteEmployees() {
+    public Employee deleteEmployee() {
         Employee employee = new Employee();
         employee.setName("Natalia");
         employee.setEmail("mataliaa@gmail.com");
@@ -58,7 +59,7 @@ public class EmployeesController {
     }
 
     @RequestMapping(value = "/employees2342476")
-    public Employee searchEmployees() {
+    public Employee searchEmployee() {
         Employee employee = new Employee();
         employee.setName("Natalia");
         employee.setEmail("mataliaa@gmail.com");

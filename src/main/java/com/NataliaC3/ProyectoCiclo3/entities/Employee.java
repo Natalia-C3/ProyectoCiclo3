@@ -5,10 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "employees")
@@ -16,7 +13,8 @@ import javax.persistence.Table;
 
 public class Employee {
     @Id
-    @Getter @Setter @Column(name = "id")
+    @Getter @Setter
+    @Column(name = "id")
     private Long id;
     @Getter @Setter @Column(name = "name")
     private String name;
@@ -30,4 +28,6 @@ public class Employee {
     private String profile;
     @Getter @Setter @Column(name = "password")
     private String password;
+
+
 }
